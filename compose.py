@@ -281,7 +281,7 @@ def ill_florida(d, x, y, w, h):
     d.rectangle([x, y + h - 14, x + w, y + h], fill=(90, 130, 170))
     d.rounded_rectangle([x + w - 80, y + 5, x + w - 4, y + 19], radius=6,
                         fill=(178, 34, 34))
-    centered(d, x + w - 42, y + 7, "300+ RESCUES", fb(SANS_B, 9), WHITE)
+    centered(d, x + w - 42, y + 7, "300+ CALLS", fb(SANS_B, 9), WHITE)
 
 
 def ill_suneung(d, x, y, w, h):
@@ -409,7 +409,7 @@ CONTINENTS = {
 # story number -> (lon, lat) for map pins (stories 1-13)
 PINS = {1: (114, 22), 2: (175, -41), 3: (-74, 40), 4: (4, 52), 5: (30, 37),
         6: (85, 20), 7: (36, 45), 8: (34, 31), 9: (-80, 26), 10: (127, 37),
-        11: (56, 26), 12: (-74, 5), 13: (20, 32)}
+        11: (56, 26), 12: (-74, 5), 13: (22.6, 32.8)}
 
 
 def draw_map(d, x, y, w, h, bg, land, pin_fill=RED):
@@ -914,9 +914,9 @@ LEADS2 = [
     dict(n=1, place="SHENZHEN", topic="SUMMIT", region="ASIA-PACIFIC",
          art="summit", src="REUTERS · BBC",
          head="Three leaders issue a peace declaration",
-         deck="The first trilateral of the US, Chinese and Russian leaders "
-              "ends with a four-point peace declaration. No Ukraine "
-              "breakthrough."),
+         deck="First trilateral ends with a four-point declaration: UN "
+              "reform, oil supply, ICC limits, nuclear-risk talks. No "
+              "Ukraine deal."),
     dict(n=2, place="WORLDWIDE", topic="GAMES", region="WORLD",
          art="gta", src="REUTERS",
          head="GTA VI arrives after a 13-year wait",
@@ -943,7 +943,7 @@ CARDS2 = [
     dict(n=6, place="ODISHA", topic="STORM", region="ASIA-PACIFIC",
          art="cyclone", src="IMD",
          head="Akvan bears down as 200,000 flee the coast",
-         deck="Red alerts in 11 districts; landfall Friday."),
+         deck="Red alerts in six districts; landfall Friday."),
     dict(n=7, place="KERCH", topic="WAR", region="EUROPE",
          art="bridge", src="BBC · KYIV",
          head="Crimean Bridge hit a third time in a week",
@@ -963,15 +963,15 @@ CARDS2 = [
     dict(n=11, place="HORMUZ", topic="GULF", region="MIDEAST",
          art="hormuz", src="REUTERS · CLAIM",
          head="Three tankers ablaze after mine strikes",
-         deck="Iran's navy says the ships hit mines; traffic at 42%."),
+         deck="Iran's navy says the ships hit mines; three caught fire."),
     dict(n=12, place="BOGOTÁ", topic="LABOUR", region="THE AMERICAS",
          art="colombia", src="AFP",
          head="Colombia's unions strike nationwide",
          deck="Workers and teachers march against the tax bill."),
-    dict(n=13, place="BENGHAZI", topic="CRIME", region="AFRICA",
+    dict(n=13, place="DERNA", topic="CRIME", region="AFRICA",
          art="benghazi", src="AFP",
          head="Cocaine and millions of pills seized in Libya",
-         deck="Officials display a record drug haul."),
+         deck="4m pills and 29kg of cocaine seized; gang arrested."),
     dict(n=14, place="RIYADH", topic="GULF", region="MIDEAST",
          art="tower", src="REUTERS · JPOST",
          head="Houthi missile hits Riyadh's tallest tower",
@@ -1027,7 +1027,7 @@ NUMBERS2 = [
     ("$81.3bn", "raised by Anthropic, largest IPO ever"),
     ("15.9m", "GTA VI pre-orders banked"),
     ("200,000", "evacuated ahead of Akvan"),
-    ("$120bn", "adaptation finance open at COP31"),
+    ("$120bn", "adaptation finance proposed at COP31"),
     ("730,000", "Rohingya who fled in 2017"),
     ("551,864", "sit Korea's college exam"),
     ("4.9%", "Australian jobless, 5-year high"),
@@ -1035,9 +1035,8 @@ NUMBERS2 = [
 ]
 
 TIMELINE = ("00:00 AUCKLAND GTA VI unlocks \u00b7 08:40 SEOUL exam begins "
-            "\u00b7 04:42 RIYADH sirens \u00b7 09:30 JAKARTA law passed "
-            "\u00b7 P.M. SHENZHEN declaration \u00b7 10:00 THE HAGUE "
-            "ruling \u00b7 14:30 NEW YORK trades")
+            "\u00b7 09:00 THE HAGUE ruling \u00b7 09:30 NEW YORK trades open "
+            "\u00b7 P.M. SHENZHEN declaration \u00b7 JAKARTA law passed")
 
 DATE_CHECK2 = ("DATE CHECK \u2014 FIRST REPORTED WEDNESDAY 18 NOV, SO NOT ON "
     "THIS PAGE AS NEWS: the Iranian drone interceptions over Kuwait and "
@@ -1088,7 +1087,7 @@ def region_strip(d, x, y, w, total_label, regions):
 
 
 def timeline_strip(d, x, y, w):
-    d.text((x, y), "THE DAY BY HOURS \u2014 LOCAL TIME, IN ORDER",
+    d.text((x, y), "THE DAY BY HOURS \u2014 LOCAL TIME",
            font=fb(SANS_B, 11), fill=RED)
     d.text((x, y + 14), TIMELINE, font=fb(SANS, 10), fill=INK)
     return y + 28
@@ -1140,7 +1139,7 @@ def briefs_block_v2(d, x, y, w, briefs, header, row_h=12):
 
 def verdict_box(d, x, y, w, h=52):
     d.rectangle([x, y, x + w, y + h], fill=NAVY)
-    d.text((x + 8, y + 5), "THE VERDICT \u2014 THE HAGUE \u00b7 10:00",
+    d.text((x + 8, y + 5), "THE VERDICT \u2014 THE HAGUE \u00b7 09:00",
            font=fb(SANS_B, 10), fill=GOLD)
     vf = fb(SANS, 10)
     ly = y + 20

@@ -11,7 +11,7 @@ one image that sums up 19 November 2026's world news.
 ## The image
 
 A newspaper front page in one 1024×1024 image. The masthead names the day
-— **THURSDAY 19 NOVEMBER 2026** — and 44 stories cover it:
+— **THURSDAY 19 NOVEMBER 2026** — and 36 stories cover it:
 
 - **Lead:** Trump, Xi and Putin issue a four-point peace declaration, Shenzhen
 - **GTA VI arrives after a 13-year wait** — midnight rollout, 15.9m pre-orders
@@ -22,13 +22,16 @@ A newspaper front page in one 1024×1024 image. The masthead names the day
   deal on Greenland** · **COP31 enters its final 48 hours** · **Cyclone Akvan
   bears down on Odisha** · **Crimean Bridge hit a third time** · **Israeli
   tanks cross the Gaza ceasefire line** · **Three tankers ablaze in the Strait
-  of Hormuz** · and 29 more stories, with a DATE CHECK box for what was first
+  of Hormuz** · and 21 more stories, with a DATE CHECK box for what was first
   reported on Wednesday 18 November, a day-by-hours timeline, and a verdict
   box on the Hague ruling.
 
-This is the late final edition: it carries the summit's evening outcome (the
-four-point peace declaration), the PIF Tower strike, and the Greenland
-ratification — all first reported on Thursday 19 November.
+This is the late final edition, revised: it carries the summit's evening
+outcome (the four-point peace declaration, with the four points named), the
+PIF Tower strike, and the Greenland ratification — all first reported on
+Thursday 19 November — with the timeline, the Derna seizure, the Akvan
+alerts, the Hormuz deck, the Florida badge and the COP31 figure corrected
+against the sources.
 
 Every illustration is a flat drawing made for this page — no photographs, no
 recognisable faces, no hands — and every word is real rendered text drawn by
@@ -38,6 +41,7 @@ recognisable faces, no hands — and every word is real rendered text drawn by
 
 `main.py` (standard library only) copies `image.jpg` to
 `/output/entry.png`. It writes identical bytes on every run and needs no
-network. `python3 compose.py` rebuilds `image.jpg` from scratch with Pillow
-— the late final edition, 44 stories. `python3 compose.py D2` builds the
-36-story variant instead; `python3 compose.py A` rebuilds the v1 page.
+network. `python3 compose.py D2` rebuilds `image.jpg` from scratch with
+Pillow — the 36-story late final edition, byte-identically.
+`python3 compose.py` builds the 44-story variant instead;
+`python3 compose.py A` rebuilds the v1 page.
